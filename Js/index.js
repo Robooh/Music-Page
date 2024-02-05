@@ -139,17 +139,6 @@ music.currentTime = ( clickX / width) * music.duration;
 
 } 
 
-
-playBtn.addEventListener('click', togglePlay);
-prevBtn.addEventListener('click', () => changeMusic(-1));
-nextBtn.addEventListener('click', () => changeMusic(1));
-music.addEventListener('ended', () => changeMusic(1));
-music.addEventListener('timeupdate', updateProgressBar);
-playerProgress.addEventListener('click', setProgressBar);
-
-loadMusic(songs[musicIndex]);
-
-
 function loadSong(index) {
   const song = songs[index];
 
@@ -161,9 +150,37 @@ function loadSong(index) {
   music.autoplay = true;
   music.play();
 
-  
-  
 }
+
+function randomizeMusic() {
+  const randomIndex = Math.floor(Math.random() * songs.length);
+  const selectedSong = songs[randomIndex];
+
+  music.src = selectedSong.path;
+  title.textContent = selectedSong.title;
+  artist.textContent = selectedSong.artist;
+  music.onloadedmetadata = () => {
+    music.play();
+    console.log(`Now Playing: ${selectedSong.title} by ${selectedSong.artist}`)
+  };
+
+  const coverImage = document.getElementById('cover');
+  coverImage.src = selectedSong.cover;
+}
+
+
+
+playBtn.addEventListener('click', togglePlay);
+prevBtn.addEventListener('click', () => changeMusic(-1));
+nextBtn.addEventListener('click', () => changeMusic(1));
+music.addEventListener('ended', () => changeMusic(1));
+music.addEventListener('timeupdate', updateProgressBar);
+playerProgress.addEventListener('click', setProgressBar);
+
+loadMusic(songs[musicIndex]);
+
+
+
 
 
 
