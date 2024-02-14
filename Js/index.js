@@ -9,6 +9,8 @@ menuOpen.addEventListener('click', () => sidebar.style.left = '0');
 menuClose.addEventListener('click', () => sidebar.style.left = '-100%');
 
 
+//Music-Player
+
 const image = document.getElementById('cover'),
 title = document.getElementById('music-title'),
 artist = document.getElementById('music-artist'),
@@ -76,7 +78,7 @@ const songs = [
   }
 ];
 
-let musicIndex = 3;
+let musicIndex = 7;
 let isPlaying = false;
 
 
@@ -176,12 +178,31 @@ function randomizeMusic() {
 
 
 
+function toggleVolumeSlider() {
+  var volumeSlider = document.getElementById("volume-slider");
+  if (volumeSlider.style.display === "none") {
+      volumeSlider.style.display = "block";
+  } else {
+      volumeSlider.style.display = "none";
+  }
+}
+
+function setVolume() {
+  const volumeSlider = document.getElementById('volume-slider');
+  music.volume = volumeSlider.value;
+}
+
+
+
+
+
 playBtn.addEventListener('click', togglePlay);
 prevBtn.addEventListener('click', () => changeMusic(-1));
 nextBtn.addEventListener('click', () => changeMusic(1));
 music.addEventListener('ended', () => changeMusic(1));
 music.addEventListener('timeupdate', updateProgressBar);
 playerProgress.addEventListener('click', setProgressBar);
+document.getElementById('volume-slider').addEventListener('input', setVolume);
 
 loadMusic(songs[musicIndex]);
 
@@ -208,6 +229,13 @@ loadMusic(songs[musicIndex]);
 
 
 
+
+
+
+
+
+
+  
 
 
 

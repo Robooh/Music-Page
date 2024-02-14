@@ -162,7 +162,7 @@
                             <p>Trance</p>
                         </div>
                         <div class="item">
-                            <p>electro Pop</p>
+                            <p>Electro Pop</p>
                         </div>
                         <div class="item">
                             <p>Classic</p>
@@ -170,13 +170,13 @@
                     </div>
                 </div>
 
-                <div class="music-list">
+                <div class="music-list" >
                     <div class="header">
                         <h5>Top Songs</h5>
                         <a href="#">See all</a>   
                     </div>
 
-                    <div class="items">
+                    <div class="items" id="audio">
                         <div class="item" >
                             <div class="info">
                                 <p>01</p>
@@ -341,7 +341,8 @@
        
                   <div class="player-actions">
                     <div class="buttons">
-                    <i class='bx bx-repeat' id="repeatIcon" onclick="loopMusic()"></i>
+                    <i class='bx bx-volume' id="volume-icon" onclick="toggleVolumeSlider()"></i>
+                    <input id="volume-slider" type="range" min="0" max="1" step="0.01" value="1" title="slider-v" class="volume-slider">
                     <i class='bx bx-first-page' id="prev"></i>
                     <i class="fa-solid  fa-play play-button" title="Play" id="start"></i>
                     <i class='bx bx-last-page' id="next"></i>

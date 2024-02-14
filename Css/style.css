@@ -459,7 +459,7 @@ html,body {
 }
 
 .container .right-section .music-player .player-actions .buttons i{
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .container .right-section .music-player .player-actions .buttons .play-button{
@@ -475,6 +475,13 @@ html,body {
     align-items: center;
     position: absolute;
     bottom: 8px;
+}
+
+.volume-slider {
+    display: none;
+    width: 40px;
+    border: 1px solid ;
+    border-radius: 22px;
 }
 
 .container main header .nav-links button,
