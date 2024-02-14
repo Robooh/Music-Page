@@ -67,6 +67,12 @@ const songs = [
     artist: 'Powerless feat. Sennzai',
     path: 'Src/Music/Lost-Desire.mp3',
     cover: 'Src/Card-img/Lost.jpg'
+  },
+  {
+    title: 'Renegade',
+    artist: 'Substantia/X.Ari',
+    path: 'Src/Music/W-Theme.mp3',
+    cover: 'Src/Card-img/W.jpg',
   }
 ];
 
