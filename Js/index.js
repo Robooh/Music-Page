@@ -75,6 +75,12 @@ const songs = [
     artist: 'Substantia/X.Ari',
     path: 'Src/Music/W-Theme.mp3',
     cover: 'Src/Card-img/W.jpg',
+  },
+  {
+    title: 'Curse',
+    artist: 'Noct',
+    path: 'Src/Music/Curse.mp3',
+    cover: 'Src/Card-img/Curse.jpg',
   }
 ];
 
