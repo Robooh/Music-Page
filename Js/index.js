@@ -198,6 +198,13 @@ function setVolume() {
   music.volume = volumeSlider.value;
 }
 
+const showAllSongsButton = document.getElementById('show-all-songs');
+const hiddenItemsContainer = document.querySelector('.hidden-items');
+
+showAllSongsButton.addEventListener('click', () => {
+  hiddenItemsContainer.style.display = 'block';
+});
+
 
 
 
@@ -211,6 +218,9 @@ playerProgress.addEventListener('click', setProgressBar);
 document.getElementById('volume-slider').addEventListener('input', setVolume);
 
 loadMusic(songs[musicIndex]);
+
+
+
 
 
 

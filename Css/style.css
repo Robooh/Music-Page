@@ -501,6 +501,10 @@ html,body {
   }
 
 
+.hidden-items {
+    display: none;
+}
+
 
 
 
